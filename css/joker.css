@@ -1,0 +1,469 @@
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+  font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+Placeholder: $code-block,
+#article pre,
+#article .highlight {
+  overflow: auto;
+  margin: 1rem 0;
+  padding: 0;
+  padding-top: 1.4rem;
+  background: #263238;
+  color: #eff;
+  font-size: $code-font-size;
+  line-height: $line-height-code-block;
+}
+figure.highlight {
+  position: relative;
+}
+blockquote {
+  margin: 0;
+  padding: 0 0.6rem;
+  border-left: 0.2rem solid $blockquote-padding-color;
+  color: $blockquote-color;
+  position: relative;
+}
+blockquote::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: #000;
+  left: 0;
+}
+#article h1,
+#article h2,
+#article h3,
+#article h4,
+#article h5 {
+  position: relative;
+}
+#article h1::before,
+#article h2::before,
+#article h3::before,
+#article h4::before,
+#article h5::before {
+  content: "&";
+  position: absolute;
+  left: -3%;
+}
+#article img {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+#article pre,
+#article code {
+  font-family: $code-font !important;
+}
+#article code {
+  padding: 0.1rem 0.2rem;
+  background: $code-background;
+  color: $code-foreground;
+  word-wrap: break-word;
+  font-size: $code-font-size;
+}
+#article pre code {
+  padding: 0;
+  background: none;
+  color: #eff;
+  text-shadow: none;
+}
+#article .highlight {
+  position: relative;
+  border-radius: 1px;
+}
+#article .highlight pre {
+  margin: 0;
+  padding: 8px 0;
+  border: none;
+}
+#article .highlight .line::selection {
+  background: rgba(128,203,196,0.125);
+  color: #eff;
+}
+#article .highlight table {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  border: none;
+}
+#article .highlight td {
+  padding: 0;
+  border: none;
+}
+#article .highlight figcaption {
+  zoom: 1;
+  position: absolute;
+  z-index: 1;
+  margin-bottom: 1em;
+  padding: 0.2em 0 0.2em 0.7rem;
+  width: 100%;
+  height: 1.4em;
+  color: #eff;
+  font-size: 1em;
+  line-height: 1em;
+}
+#article .highlight figcaption:before,
+#article .highlight figcaption:after {
+  content: "";
+  display: table;
+}
+#article .highlight figcaption:after {
+  clear: both;
+}
+#article .highlight figcaption span {
+  float: left;
+  overflow: hidden;
+  max-width: 100%;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#article .highlight figcaption a {
+  float: right;
+  padding-right: 10px;
+  color: #eff;
+}
+#article .highlight figcaption a:hover {
+  border-bottom-color: #eff;
+}
+#article .highlight figcaption+table {
+  margin-top: 1em;
+}
+#article .highlight figcaption+table:before {
+  margin-top: -2.1rem;
+}
+#article .highlight figcaption+table:after {
+  top: -2.1rem;
+}
+#article .highlight .gutter {
+  width: 30px;
+}
+#article .highlight .gutter pre {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: #263238;
+  color: #f00;
+  text-align: right;
+}
+#article .highlight .code pre {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  width: 100%;
+  background-color: #263238;
+}
+#article .highlight .line {
+  height: 1rem;
+}
+#article .gutter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+#article .gist table {
+  width: auto;
+}
+#article .gist table td {
+  border: none;
+}
+#article pre .deletion {
+  background: #800000;
+}
+#article pre .addition {
+  background: #008000;
+}
+#article pre .meta {
+  color: #c792ea;
+}
+#article pre .comment {
+  color: #546e7a;
+}
+#article pre .comment::selection {
+  background: rgba(128,203,196,0.125);
+  color: #eff;
+}
+#article pre .variable,
+#article pre .attribute,
+#article pre .regexp,
+#article pre .ruby .constant,
+#article pre .xml .tag .title,
+#article pre .xml .pi,
+#article pre .xml .doctype,
+#article pre .html .doctype,
+#article pre .css .id,
+#article pre .tag .name,
+#article pre .css .class,
+#article pre .css .pseudo {
+  color: #ff5370;
+}
+#article pre .variable::selection,
+#article pre .attribute::selection,
+#article pre .regexp::selection,
+#article pre .ruby .constant::selection,
+#article pre .xml .tag .title::selection,
+#article pre .xml .pi::selection,
+#article pre .xml .doctype::selection,
+#article pre .html .doctype::selection,
+#article pre .css .id::selection,
+#article pre .tag .name::selection,
+#article pre .css .class::selection,
+#article pre .css .pseudo::selection {
+  background: rgba(128,203,196,0.125);
+  color: #eff;
+}
+#article pre .tag {
+  color: #89ddff;
+}
+#article pre .tag::selection {
+  background: rgba(128,203,196,0.125);
+  color: #eff;
+}
+#article pre .number,
+#article pre .preprocessor,
+#article pre .literal,
+#article pre .params,
+#article pre .constant,
+#article pre .command {
+  color: #f78c6c;
+}
+#article pre .number::selection,
+#article pre .preprocessor::selection,
+#article pre .literal::selection,
+#article pre .params::selection,
+#article pre .constant::selection,
+#article pre .command::selection {
+  background: rgba(128,203,196,0.125);
+  color: #eff;
+}
+#article pre .built_in {
+  color: #ffcb6b;
+}
+#article pre .built_in::selection {
+  background: rgba(128,203,196,0.125);
+  color: #eff;
+}
+#article pre .ruby .class .title,
+#article pre .css .rules .attribute,
+#article pre .string,
+#article pre .value,
+#article pre .inheritance,
+#article pre .header,
+#article pre .ruby .symbol,
+#article pre .xml .cdata,
+#article pre .special,
+#article pre .number,
+#article pre .formula {
+  color: #c3e88d;
+}
+#article pre .ruby .class .title::selection,
+#article pre .css .rules .attribute::selection,
+#article pre .string::selection,
+#article pre .value::selection,
+#article pre .inheritance::selection,
+#article pre .header::selection,
+#article pre .ruby .symbol::selection,
+#article pre .xml .cdata::selection,
+#article pre .special::selection,
+#article pre .number::selection,
+#article pre .formula::selection {
+  background: rgba(128,203,196,0.125);
+  color: #eff;
+}
+#article pre .keyword,
+#article pre .title,
+#article pre .css .hexcolor {
+  color: #89ddff;
+}
+#article pre .keyword::selection,
+#article pre .title::selection,
+#article pre .css .hexcolor::selection {
+  background: rgba(128,203,196,0.125);
+  color: #eff;
+}
+#article pre .function,
+#article pre .python .decorator,
+#article pre .python .title,
+#article pre .ruby .function .title,
+#article pre .ruby .title .keyword,
+#article pre .perl .sub,
+#article pre .javascript .title,
+#article pre .coffeescript .title {
+  color: #82aaff;
+}
+#article pre .function::selection,
+#article pre .python .decorator::selection,
+#article pre .python .title::selection,
+#article pre .ruby .function .title::selection,
+#article pre .ruby .title .keyword::selection,
+#article pre .perl .sub::selection,
+#article pre .javascript .title::selection,
+#article pre .coffeescript .title::selection {
+  background: rgba(128,203,196,0.125);
+  color: #eff;
+}
+#article pre .tag .attr,
+#article pre .javascript .function {
+  color: #c792ea;
+}
+#article pre .tag .attr::selection,
+#article pre .javascript .function::selection {
+  background: rgba(128,203,196,0.125);
+  color: #eff;
+}
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+header {
+  width: 100%;
+  height: 86px;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+}
+header #joker-header {
+  height: 100%;
+  padding: 0 50px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+header #joker-header #header-logo {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100px;
+  height: 86px;
+}
+header #joker-header #header-logo img {
+  width: 100%;
+  height: 100%;
+}
+header #joker-header #header-nav {
+  min-width: 400px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  line-height: 86px;
+}
+#joker-posts {
+  width: 100%;
+}
+#joker-posts .recent-posts {
+  padding: 0 10%;
+}
+#joker-posts .recent-posts .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#joker-posts .recent-posts .row .col {
+  width: 30%;
+  height: 200px;
+  border-radius: 15px;
+  -webkit-box-shadow: -5px 10px 60px -13px #000;
+  box-shadow: -5px 10px 60px -13px #000;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#joker-posts .recent-posts .row .col .post {
+  width: 100%;
+  height: 100%;
+}
+#joker-posts .recent-posts .row .col .post .title {
+  font-size: 1.5rem;
+}
+#joker-posts .recent-posts .row .col .post .title a:hover {
+  color: #ff1;
+}
+#joker-posts .recent-posts .row .col .post .time {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+#pagination {
+  text-align: center;
+  height: 80px;
+}
+#pagination .pagination {
+  line-height: 80px;
+  margin: 0 auto;
+  width: 30%;
+}
+#pagination .pagination .page-number {
+  color: #fff;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #999;
+  margin: 5px;
+}
+#article {
+  width: 80%;
+  margin: 0 auto;
+}
