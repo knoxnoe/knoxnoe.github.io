@@ -49,9 +49,11 @@ main {
   display: block;
   margin: 0 auto;
 }
+
 #joker-post figure {
   background-color: #bdbdbd;
 }
+
 #joker-about {
   padding: 30px 10%;
 }
