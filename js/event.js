@@ -1,5 +1,6 @@
 import utils from './utils.js';
 
+/*首页文章卡片翻转*/
 $('.font-post').each(function(index) {
 
   const handle = () => {
@@ -17,6 +18,8 @@ $('.back-post').each(function(index) {
   $(this).on('click', utils.debounce(handle, 600))
 })
 
+
+/*移动端隐藏菜单*/
 $('#menu').on('touchstart', function() {
   var e=window.event || event;
     if(e.stopPropagation){    
@@ -26,6 +29,7 @@ $('#menu').on('touchstart', function() {
     }
   $(this).next().addClass('menu-list-show')
 })
+
 $('.menu-list a').on('touchstart', function() {
   var e=window.event || event;
   if(e.stopPropagation){    
@@ -34,9 +38,7 @@ $('.menu-list a').on('touchstart', function() {
       e.cancelBubble = true;   
   }
 })
+
 $('body').on('touchstart', function() {
   $('.menu-list').removeClass('menu-list-show')
 })
-// $('.menu-list').on('touchcancel', function() {
-//   $(this).removeClass()
-// })
