@@ -1,4 +1,4 @@
-import utils from './utils.js';
+import { debounce } from './utils.js';
 
 /*首页文章卡片翻转*/
 $('.font-post').each(function(index) {
@@ -7,7 +7,7 @@ $('.font-post').each(function(index) {
     $(this).parent('.card-post').removeClass().addClass('card-post rotatepost')
   }
   
-  $(this).on('click', utils.debounce(handle, 600))
+  $(this).on('click', debounce(handle, 600))
 })
 
 $('.back-post').each(function(index) {
@@ -15,7 +15,7 @@ $('.back-post').each(function(index) {
   const handle = () => {
     $(this).parent('.card-post').removeClass().addClass('card-post')
   }
-  $(this).on('click', utils.debounce(handle, 600))
+  $(this).on('click', debounce(handle, 600))
 })
 
 

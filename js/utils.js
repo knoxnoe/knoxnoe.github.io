@@ -31,7 +31,24 @@ function throttle(fn, delay) {
   }
 }
 
-export default {
+//获取网页滚动距离的方法
+function getPageScroll() {
+  let x, y;
+  if (window.pageXOffset){//查看有无pageXOffset属性：IE9以及IE9以上的浏览器
+      x = window.pageXOffset;
+      y = window.pageYOffset;
+  }else if (document.compatMode ==  "BackCompact"){//混杂（怪异）模式下浏览器
+      x = document.body.scrollLeft;
+      y = document.body.scrollTop;
+  }else {//标准模式下浏览器
+      x = document.documentElement.scrollLeft;
+      y = document.documentElement.scrollTop;
+  }
+  return {x, y}
+}
+
+export {
   debounce,
-  throttle
+  throttle,
+  getPageScroll
 }
