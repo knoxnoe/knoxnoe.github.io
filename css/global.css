@@ -66,9 +66,8 @@ td {
 body {
   background-color: $theme-bg-color;
   font-size: 1rem;
-  line-height: 1.5;
   color: #000;
-line-height
+  line-height: 1.5;
 }
 ol,
 ul {
@@ -96,4 +95,19 @@ a {
 main {
   min-height: 100vh;
   margin-top: 100px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: $theme-scroll-bg;
+}
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $theme-scroll-color;
+  background-clip: padding-box;
+  min-height: 28px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: $theme-scroll-hover;
 }
