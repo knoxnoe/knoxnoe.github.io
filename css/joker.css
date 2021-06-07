@@ -443,8 +443,18 @@ main {
 }
 #joker-about .about-main .left-context {
   width: 78%;
+  padding-right: 6em;
 }
 #joker-about .about-main .left-context .intro {
+  margin-bottom: 50px;
+}
+#joker-about .about-main .left-context .intro .intro-main {
+  text-indent: 2em;
+}
+#joker-about .about-main .left-context .custom .custom-slot {
+  margin-bottom: 50px;
+}
+#joker-about .about-main .left-context .custom .custom-slot .custom-lists {
   text-indent: 2em;
 }
 #joker-about .about-main .right-context {
