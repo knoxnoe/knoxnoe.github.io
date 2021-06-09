@@ -63,7 +63,7 @@ td {
   padding: 0;
   border: 0;
   outline: 0;
-  font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei UI, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 body {
   background-color: #fff;
@@ -663,13 +663,15 @@ header #joker-header #header-nav .menu-list a {
 #joker-main #joker-posts .recent-posts .card-post {
   width: 30%;
   height: 350px;
-  border-radius: 15px;
+  border: 6px solid #333;
+  border-radius: 4px;
   margin-top: 2em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-shadow: 0px 0px 50px 15px #ddd;
-  box-shadow: 0px 0px 50px 15px #ddd;
+  padding: 1em;
+  -webkit-box-shadow: 0 6px 24px 0 #696969, inset 0 1px 6px 0 #696969;
+  box-shadow: 0 6px 24px 0 #696969, inset 0 1px 6px 0 #696969;
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
   -o-transition: 0.6s;
@@ -686,8 +688,13 @@ header #joker-header #header-nav .menu-list a {
   margin: 1em 1.62%;
 }
 #joker-main #joker-posts .recent-posts .card-post:hover {
-  -webkit-box-shadow: 0px 10px 40px -13px #000;
-  box-shadow: 0px 10px 40px -13px #000;
+  -webkit-box-shadow: 0px 10px 40px -13px #fff;
+  box-shadow: 0px 10px 40px -13px #fff;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 #joker-main #joker-posts .recent-posts .card-post.rotatepost {
   -webkit-transform: perspective(800px) rotateY(180deg);
@@ -695,6 +702,13 @@ header #joker-header #header-nav .menu-list a {
   -o-transform: perspective(800px) rotateY(180deg);
   -ms-transform: perspective(800px) rotateY(180deg);
   transform: perspective(800px) rotateY(180deg);
+}
+#joker-main #joker-posts .recent-posts .card-post.rotatepost:hover {
+  -webkit-transform: perspective(800px) rotateY(180deg) scale(1.05);
+  -moz-transform: perspective(800px) rotateY(180deg) scale(1.05);
+  -o-transform: perspective(800px) rotateY(180deg) scale(1.05);
+  -ms-transform: perspective(800px) rotateY(180deg) scale(1.05);
+  transform: perspective(800px) rotateY(180deg) scale(1.05);
 }
 #joker-main #joker-posts .recent-posts .card-post .post {
   width: 100%;
@@ -705,12 +719,42 @@ header #joker-header #header-nav .menu-list a {
   backface-visibility: hidden;
   border-radius: 15px;
 }
+#joker-main #joker-posts .recent-posts .card-post .post i.fa {
+  margin-right: 0.5em;
+}
 #joker-main #joker-posts .recent-posts .card-post .post.font-post {
   -webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
   -o-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   transform: rotateY(0deg);
+}
+#joker-main #joker-posts .recent-posts .card-post .post.font-post .title {
+  -o-text-overflow: -o-ellipsis-lastline;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 1.5rem;
+}
+#joker-main #joker-posts .recent-posts .card-post .post.font-post .summary {
+  font-style: italic;
+  color: #757575;
+  font-size: 0.9rem;
+  height: 100px;
+  margin-top: 40px;
+  text-indent: 1em;
+}
+#joker-main #joker-posts .recent-posts .card-post .post.font-post a {
+  color: #c7254e;
+  background-color: #f9f2f4;
+}
+#joker-main #joker-posts .recent-posts .card-post .post.font-post a:hover {
+  text-decoration: underline;
 }
 #joker-main #joker-posts .recent-posts .card-post .post.back-post {
   -webkit-transform: rotateY(180deg);
@@ -720,26 +764,6 @@ header #joker-header #header-nav .menu-list a {
   transform: rotateY(180deg);
   position: relative;
   top: -100%;
-}
-#joker-main #joker-posts .recent-posts .card-post .post .title {
-  font-size: 1.5rem;
-}
-#joker-main #joker-posts .recent-posts .card-post .post a:hover {
-  color: #ff1;
-}
-#joker-main #joker-posts .recent-posts .card-post .post .time {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -o-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
 }
 @media screen and (max-width: 600px) {
   #joker-main #joker-posts .recent-posts {
@@ -1058,4 +1082,41 @@ ul.socialIcon li i.fa:hover {
   white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+}
+#joker-algolia-search {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+#joker-algolia-search #joker-algolia-panel {
+  width: 0;
+  position: relative;
+}
+#joker-algolia-search #joker-algolia-panel input {
+  width: 0;
+  padding: 0;
+  border: none;
+}
+#joker-algolia-search #joker-algolia-panel #joker-algolia-search-results {
+  position: absolute;
+  z-index: 999;
+  background-color: #fff;
+  height: 400px;
+  overflow-y: auto;
+}
+#joker-algolia-search #joker-mask {
+  position: absolute;
+  height: calc(100vh - 86px);
+  width: calc(100vw - 9px);
+  display: none;
+  top: 86px;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)" !important;
+  filter: alpha(opacity=50) !important;
+  z-index: 998;
 }
